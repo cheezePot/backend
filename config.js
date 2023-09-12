@@ -2,10 +2,10 @@ let mysql = require("mysql");
 require('dotenv').config();
 
 var dbconn = mysql.createConnection({
-    host: 'cheesepot.cynbhblak8px.eu-north-1.rds.amazonaws.com',
-    user: "root",
-    password: "Alflarhkgkrrh1!",
-    database: "cheesepot",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
   });
 
 module.exports = dbconn;
